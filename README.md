@@ -9,15 +9,13 @@ Current iamges can also be found at dockerhub:
 
 https://hub.docker.com/r/yveshoppe/joomla-systemtests/builds/
 
-```docker pull yveshoppe/joomla-systemtests``
+``docker pull yveshoppe/joomla-systemtests``
 
 ## Included software
 
 * Apache 2.4
 * MySQL 5.5
-* PHP 5.3
-* PHP 5.5
-* PHP 5.6
+* PHP
 * Composer (System wide)
 * Robo.li (System Wide)
 * Pear
