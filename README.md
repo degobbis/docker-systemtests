@@ -21,6 +21,7 @@ https://hub.docker.com/r/yveshoppe/joomla-systemtests/builds/
 * Pear
 * PHPUnit
 * Phing
+* JoRobo
 * PHP_CommandLineTools
 * PHPcs 1.5.6 including Joomla coding standards
 * PHPcpd
