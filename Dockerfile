@@ -29,6 +29,7 @@ ADD config/000-default.conf /etc/apache2/sites-available/000-default.conf
 
 # php.ini Apache
 ADD config/php.ini-apache /etc/php5/apache2/php.ini
+ADD config/php.ini-apache /etc/php5/cli/php.ini
 
 # install service files for runit
 ADD config/mysqld.service /etc/service/mysqld/run
