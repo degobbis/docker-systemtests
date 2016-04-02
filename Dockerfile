@@ -1,5 +1,5 @@
-# Build 2016-03-03
-FROM ubuntu:xenial
+# Build 2016-04-02
+FROM ubuntu:trusty
 MAINTAINER Yves Hoppe <yves@compojoom.com>
 
 # Set correct environment variables.
@@ -10,7 +10,7 @@ RUN apt-get update
 
 # we use the enviroment variable to stop debconf from asking questions..
 RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y mysql-server apache2 php5 php5-cli php5-mysql php-pear mysql-client php5-xdebug php5-dev php5-curl curl php5-mcrypt pear-channels wget unzip git fluxbox firefox openjdk-7-jre xvfb \
-	dbus libasound2 libqt4-dbus libqt4-network libqtcore4 libqtgui4 libpython2.7 libqt4-xml libaudio2 fontconfig  nano
+	dbus libasound2 libqt4-dbus libqt4-network libqtcore4 libqtgui4 libpython2.7 libqt4-xml libaudio2 fontconfig vim
 
 # package install is finished, clean up
 RUN apt-get clean # && rm -rf /var/lib/apt/lists/*
@@ -55,4 +55,3 @@ RUN composer global require squizlabs/php_codesniffer=1.5.6
 
 # Use baseimage-docker's init system.
 CMD /bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"
-
