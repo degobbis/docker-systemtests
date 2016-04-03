@@ -312,8 +312,7 @@ open_basedir =
 ; It receives a comma-delimited list of function names. This directive is
 ; *NOT* affected by whether Safe Mode is turned On or Off.
 ; http://php.net/disable-functions
-disable_functions = 
-pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority,
+disable_functions = pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority,
 
 ; This directive allows you to disable certain classes for security reasons.
 ; It receives a comma-delimited list of class names. This directive is
@@ -460,7 +459,7 @@ memory_limit = 128M
 ; Development Value: E_ALL
 ; Production Value: E_ALL & ~E_DEPRECATED & ~E_STRICT
 ; http://php.net/error-reporting
-error_reporting = E_ALL
+error_reporting = E_ALL & ~E_NOTICE & ~E_DEPRECATED
 
 ; This directive controls whether or not and where PHP will output errors,
 ; notices and warnings too. Error output is very useful during development, but
@@ -671,7 +670,7 @@ auto_globals_jit = On
 ; Its value may be 0 to disable the limit. It is ignored if POST data reading
 ; is disabled through enable_post_data_reading.
 ; http://php.net/post-max-size
-post_max_size = 8M
+post_max_size = 64M
 
 ; Automatically add files before PHP document.
 ; http://php.net/auto-prepend-file
@@ -691,7 +690,7 @@ default_mimetype = "text/html"
 
 ; PHP's default character set is set to empty.
 ; http://php.net/default-charset
-;default_charset = "UTF-8"
+default_charset = "UTF-8"
 
 ; Always populate the $HTTP_RAW_POST_DATA variable. PHP's default behavior is
 ; to disable this feature. If post reading is disabled through
@@ -803,7 +802,7 @@ file_uploads = On
 
 ; Maximum allowed size for uploaded files.
 ; http://php.net/upload-max-filesize
-upload_max_filesize = 128M
+upload_max_filesize = 64M
 
 ; Maximum number of files that can be uploaded via a single request
 max_file_uploads = 20
@@ -877,7 +876,7 @@ cli_server.color = On
 [Date]
 ; Defines the default timezone used by the date functions
 ; http://php.net/date.timezone
-;date.timezone =
+date.timezone = Europe/Berlin
 
 ; http://php.net/date.default-latitude
 ;date.default_latitude = 31.7667

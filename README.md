@@ -5,7 +5,7 @@ Docker with LAMP setup, firefox and other tools for system tests with codeceptio
 
 Based on docker phusion/baseimage (Ubuntu 14.04) and customizations
 
-Current iamges can also be found at dockerhub:
+Current images can also be found at dockerhub:
 
 https://hub.docker.com/r/yveshoppe/joomla-systemtests/builds/
 

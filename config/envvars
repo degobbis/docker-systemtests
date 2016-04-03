@@ -23,7 +23,7 @@ export APACHE_LOCK_DIR=/var/lock/apache2$SUFFIX
 export APACHE_LOG_DIR=/var/log/apache2$SUFFIX
 
 ## The locale used by some modules like mod_dav
-export LANG=C
+#export LANG=C
 
 ## The command to get the status for 'apache2ctl status'.
 ## Some packages providing 'www-browser' need '--dump' instead of '-dump'.
@@ -41,6 +41,3 @@ export LANG=C
 ## This will produce a verbose output on package installations of web server modules and web application
 ## installations which interact with Apache
 #export APACHE2_MAINTSCRIPT_DEBUG=1
-
-
-
