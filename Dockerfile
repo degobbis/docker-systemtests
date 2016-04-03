@@ -68,5 +68,8 @@ RUN composer global require joomla-projects/selenium-server-standalone:dev-maste
 RUN composer global require fzaninotto/faker:^1.5
 RUN composer global require squizlabs/php_codesniffer=1.5.6
 
+# Add user
+RUN useradd -m -u 1001 guido
+
 # Use baseimage-docker's init system.
 CMD /bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"
