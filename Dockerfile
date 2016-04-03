@@ -16,7 +16,7 @@ RUN apt-get update; apt-get upgrade -y; apt-get install -y locales software-prop
 
 # Configure timezone and locale
 RUN echo "Europe/Berlin" > /etc/timezone; dpkg-reconfigure -f noninteractive tzdata
-RUN locale
+# RUN locale
 RUN add-apt-repository --yes ppa:ondrej/php5-5.6
 
 RUN apt-get update
