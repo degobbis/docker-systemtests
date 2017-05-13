@@ -403,7 +403,7 @@ max_input_time = 600
 
 ; Maximum amount of memory a script may consume (128MB)
 ; http://php.net/memory-limit
-memory_limit = 128M
+memory_limit = 512M
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Error handling and logging ;
@@ -1928,3 +1928,7 @@ ldap.max_links = -1
 ; Local Variables:
 ; tab-width: 4
 ; End:
+
+[XDebug]
+xdebug.remote_enable = on
+xdebug.remote_connect_back = on

@@ -1,32 +1,18 @@
 # Docker Systemtest image
-[![](https://badge.imagelayers.io/yveshoppe/joomla-systemtests:latest.svg)](https://imagelayers.io/?images=yveshoppe/joomla-systemtests:latest 'Get your own badge on imagelayers.io')
 
-Docker with LAMP setup, firefox and other tools for system tests with codeception.
+Docker with LAMP setup and other tools for a development environment with PHP 5.6.
 
-Based on docker phusion/baseimage (Ubuntu 14.04) and customizations
-
-Current images can also be found at dockerhub:
-
-https://hub.docker.com/r/yveshoppe/joomla-systemtests/builds/
-
-``docker pull yveshoppe/joomla-systemtests``
+Based on docker Ubuntu latest and customizations
 
 ## Included software
 
 * Apache 2.4
-* MySQL 5.5
-* PHP
-* Composer (System wide)
-* Robo.li (System Wide)
+* MySQL 5.7
+* PHP 5.6
 * Pear
-* PHPUnit
-* Phing
-* JoRobo
-* PHP_CommandLineTools
-* PHPcs 1.5.6 including Joomla coding standards
-* PHPcpd
 
-### Gui Software
+## CommandLineTools
 
-* Firefox
-* Fluxbox and Xvfb (to run selenium tests)
+* composer ([composer.phar](https://github.com/composer/composer/))
+* cmsscanner ([cmsscanner.phar](https://github.com/CMS-Garden/cmsscanner/))
+* wp ([wp-cli.phar](https://wp-cli.org/))
